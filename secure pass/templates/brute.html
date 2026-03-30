@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Password Cracking Simulator</title>
+<link rel="stylesheet" href="brute.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🔐 Password Cracking Simulator</h2>
+
+    <input type="text" id="username" placeholder="Enter Username">
+
+    <input type="file" id="fileInput">
+
+    <button onclick="generateWordlist()">Generate Wordlist</button>
+    <button onclick="startAttack()">Start Attack</button>
+
+    <div id="output"></div>
+</div>
+
+<script src="brute.js"></script>
+</body>
+</html>

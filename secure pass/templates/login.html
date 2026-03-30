@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login - SecurePass</title>
+<link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<div style="position:absolute; top:15px; left:20px;">
+<a href="/">⬅ Back</a>
+</div>
+
+<div class="container">
+
+<h2>🔐 SecurePass Login</h2>
+
+<p class="subtitle">
+Brute Force Protection Enabled (Max 3 Attempts)
+</p>
+
+<input type="text" id="username" placeholder="Email Address">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<h3 id="message"></h3>
+<p id="attemptInfo"></p>
+
+<a class="back" href="/register_page">Create Account</a>
+
+</div>
+
+<script src="/static/login.js"></script>
+
+</body>
+</html>

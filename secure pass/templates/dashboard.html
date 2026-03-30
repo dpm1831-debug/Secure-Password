@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SecurePass Dashboard</title>
+<link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+<h2>🔐 SecurePass</h2>
+<nav>
+<a href="/logout">Logout</a>
+<a href="/checker">Password Checker</a>
+<a href="/hash">SHA-256</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>Welcome to Security Dashboard</h1>
+<p class="subtitle">Manage password security tools from this panel</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🔎 Password Checker</h3>
+<p>Check if your password is weak, medium or strong.</p>
+<a href="/checker"><button>Open</button></a>
+</div>
+
+<div class="card">
+<h3>📊 Password Strength</h3>
+<p>Analyze password strength based on characters.</p>
+<button onclick="openStrength()">Open</button>
+</div>
+
+<div class="card">
+<h3>🔐 SHA-256 Encryption</h3>
+<p>Generate secure SHA-256 password hash.</p>
+<a href="/hash"><button>Open</button></a>
+</div>
+
+
+
+</div>
+
+<h2 class="section-title">🛡 Security Monitoring</h2>
+
+<div class="card wide">
+<h3>⚠ Brute Force Attack Simulation</h3>
+<p>Simulate multiple failed login attempts.</p>
+<button onclick="simulateAttack()">Run Simulation</button>
+</div>
+
+<div id="alertBox" class="alert hidden">
+🚨 Suspicious Activity Detected!
+</div>
+
+<div class="card wide">
+<h3>📜 Login Attempt Log</h3>
+<table id="logTable">
+<tr><th>Time</th><th>Status</th></tr>
+</table>
+</div>
+
+<div class="card wide">
+<h3>📊 Attack Monitoring</h3>
+<table id="attackTable">
+<tr><th>IP Address</th><th>Attempts</th><th>Status</th></tr>
+</table>
+</div>
+
+<div class="card wide tips">
+<h3>💡 Security Tips</h3>
+<ul>
+<li>Use at least 12 character passwords</li>
+<li>Include symbols & numbers</li>
+<li>Never reuse passwords</li>
+<li>Enable Two-Factor Authentication</li>
+<li>Change passwords regularly</li>
+</ul>
+</div>
+
+</div>
+
+<!-- SECURITY ANALYTICS -->
+<div class="security-box">
+<h3>🧠 Password Security Analytics</h3>
+<input type="password" id="entropyPass" placeholder="Test Password">
+<button onclick="analyzePassword()">Analyze</button>
+<p id="entropyResult"></p>
+<p id="crackTime"></p>
+<p id="securityLevel"></p>
+</div>
+
+<!-- LIVE ATTACK COUNTER -->
+<div class="security-box">
+<h3>⚡ Live Attack Counter</h3>
+<p>Total Attacks Detected: <span id="attackCount">0</span></p>
+</div>
+
+<script src="/static/dashboard.js"></script>
+
+</body>
+</html>
